@@ -50,7 +50,7 @@ let package = Package(
         .library(
             name: "PayPalDataCollector",
             targets: ["PayPalDataCollector", "PPRiskMagnes"]
-        )
+        ),
         .library(
             name: "PayPalNativeCheckout",
             targets: ["PayPalNativeCheckout"]
