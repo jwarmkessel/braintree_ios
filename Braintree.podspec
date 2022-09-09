@@ -66,11 +66,6 @@ Pod::Spec.new do |s|
     s.dependency "Braintree/PayPalDataCollector"
   end
 
-  s.subspec "SEPADirectDebit" do |s|
-    s.source_files = "Sources/BraintreeSEPADirectDebit/*.swift"
-    s.dependency "Braintree/Core"
-  end
-
   s.subspec "PayPalDataCollector" do |s|
     s.source_files = "Sources/PayPalDataCollector/**/*.{swift}"
     s.vendored_frameworks = "Frameworks/XCFrameworks/PPRiskMagnes.xcframework"
@@ -80,7 +75,12 @@ Pod::Spec.new do |s|
     s.source_files = "Sources/BraintreePayPalNativeCheckout/*.swift"
     s.dependency "Braintree/Core"
     s.dependency "Braintree/PayPal"
-    s.dependency "PayPalCheckout", '~> 0.100.0'
+    s.dependency "PayPalCheckout", '= 0.100.0'
+  end
+
+  s.subspec "SEPADirectDebit" do |s|
+    s.source_files = "Sources/BraintreeSEPADirectDebit/*.swift"
+    s.dependency "Braintree/Core"
   end
 
   s.subspec "ThreeDSecure" do |s|
